@@ -1,0 +1,47 @@
+.container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  margin-top: 30px;
+}
+.balance {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+.btn {
+  background-color: #0d1d2c;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.parentBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  width: 49%;
+  height: 100px;
+  padding: 10px 5px;
+  border: 1px solid rgba(5, 24, 34, 0.572);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.expense {
+  color: red;
+}
+.income {
+  color: green;
+}
