@@ -1,7 +1,7 @@
 import styles from "./TransActionForm.module.css";
 import { useState } from "react";
 
-const TransActionForm = ({ addTransAction }) => {
+const TransActionForm = ({ addTransAction, setIsShow }) => {
   const [inputValues, setInputValues] = useState({
     desc: "",
     amount: 0,
@@ -20,6 +20,7 @@ const TransActionForm = ({ addTransAction }) => {
     )
       return alert("Please complete the form!");
     addTransAction(inputValues);
+    setIsShow(false);
   };
 
   return (
@@ -44,6 +45,7 @@ const TransActionForm = ({ addTransAction }) => {
           value="expense"
           name="type"
           onChange={changeHandler}
+          id="expense"
         />
         <label htmlFor="expense">Expense</label>
         <input
@@ -51,6 +53,7 @@ const TransActionForm = ({ addTransAction }) => {
           value="income"
           name="type"
           onChange={changeHandler}
+          id="income"
         />
         <label htmlFor="income">Income</label>
       </div>
