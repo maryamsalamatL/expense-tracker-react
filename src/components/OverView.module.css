@@ -1,38 +1,53 @@
 .container {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .balance {
   height: 50px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-size: 18px;
+  align-items: center;
+}
+.balance span {
+  color: rgb(88, 94, 99);
+  font-size: 15px;
+}
+.balance span p {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-left: 5px;
 }
 .btn {
-  background-color: #0d1d2c;
+  background-color: rgb(52, 182, 127);
   color: #fff;
-  padding: 5px;
+  padding: 5px 10px;
+  border: none;
+  font-size: 17px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.btn:hover {
+  background-color: rgb(13, 148, 92);
+  color: #fff;
+}
 .parentBox {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 10px 0px;
 }
 .box {
   width: 49%;
   height: 100px;
-  padding: 10px 5px;
-  border: 1px solid rgba(5, 24, 34, 0.572);
+  font-size: 1rem;
+  padding: 15px 7px;
+  background-color: rgb(38, 41, 44);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -40,8 +55,10 @@
   -o-border-radius: 5px;
 }
 .expense {
-  color: red;
+  margin-top: 5px;
+  color: rgb(227, 93, 123);
 }
 .income {
-  color: green;
+  margin-top: 5px;
+  color: rgb(52, 182, 127);
 }

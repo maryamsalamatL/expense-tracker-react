@@ -1,5 +1,5 @@
 import styles from "./TransActionForm.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const TransActionForm = ({ addTransAction, setIsShow }) => {
   const [inputValues, setInputValues] = useState({
@@ -7,10 +7,16 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
     amount: 0,
     type: null,
   });
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const changeHandler = (e) => {
     setInputValues({ ...inputValues, [e.target.name]: e.target.value });
   };
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (
@@ -31,6 +37,7 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
         className={styles.input}
         value={inputValues.desc}
         onChange={changeHandler}
+        ref={inputRef}
       />
       <input
         type="number"
@@ -57,7 +64,7 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
         />
         <label htmlFor="income">Income</label>
       </div>
-      <button type="submit" className="styles.btn">
+      <button type="submit" className={styles.btn}>
         add transAction
       </button>
     </form>

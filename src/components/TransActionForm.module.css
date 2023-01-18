@@ -1,36 +1,75 @@
 .form {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: rgb(38, 41, 44);
+  color: #fff;
+  padding-top: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  animation: form 0.4s ease;
+  -webkit-animation: form 0.4s ease;
 }
 .input {
-  width: 100%;
-  height: 30px;
+  width: 90%;
+  height: 35px;
   padding: 10px;
   outline: none;
-  border: 1px solid rgba(2, 25, 48, 0.5);
+  background-color: rgb(108, 114, 120);
+  border: none;
   margin-bottom: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
 }
 .radio {
-  width: 100%;
+  width: 90%;
+  margin: 5px;
   display: flex;
   justify-content: start;
   align-items: center;
+  font-size: 1rem;
 }
 .radio input {
   margin: 0px 3px;
 }
 .btn {
-  background-color: #0d1d2c;
+  width: 95%;
+  height: 33px;
+  background-color: rgb(52, 182, 127);
   color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
   padding: 2px 3px;
+  margin: 5px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+}
+.btn:hover {
+  background-color: rgb(13, 148, 92);
+  color: #fff;
+}
+@keyframes form {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
