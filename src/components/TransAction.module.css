@@ -91,6 +91,10 @@
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+.searchBox input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 .icon {
   width: 8%;
   height: 60%;

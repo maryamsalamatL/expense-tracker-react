@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 const TransActionForm = ({ addTransAction, setIsShow }) => {
   const [inputValues, setInputValues] = useState({
     desc: "",
-    amount: 0,
+    amount: "",
     type: null,
   });
   const inputRef = useRef();
@@ -21,7 +21,7 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
     e.preventDefault();
     if (
       inputValues.desc === "" ||
-      inputValues.amount === 0 ||
+      inputValues.amount === "" ||
       inputValues.type === null
     )
       return alert("Please complete the form!");
@@ -38,6 +38,7 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
         value={inputValues.desc}
         onChange={changeHandler}
         ref={inputRef}
+        placeholder="title"
       />
       <input
         type="number"
@@ -45,6 +46,7 @@ const TransActionForm = ({ addTransAction, setIsShow }) => {
         className={styles.input}
         onChange={changeHandler}
         value={inputValues.amount}
+        placeholder="0"
       />
       <div className={styles.radio}>
         <input
